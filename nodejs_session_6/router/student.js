@@ -61,14 +61,14 @@ studentRouter.get("/", async (req, res) => {
           },
         })
         .skip(19)
-        .limit(5)
+        .limit(10)
         .toArray();
     }
-    res.status(200);
+    res.status(201);
     res.json(student);
   } catch (err) {
     res.status(500);
-    res.json("Some thing went wrong");
+    res.json("Internal server error");
   }
 });
 
