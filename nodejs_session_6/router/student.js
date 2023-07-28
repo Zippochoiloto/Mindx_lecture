@@ -64,7 +64,7 @@ studentRouter.get("/", async (req, res) => {
         .limit(10)
         .toArray();
     }
-    res.status(200);
+    res.status(201);
     res.json(student);
   } catch (err) {
     res.status(500);
